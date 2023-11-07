@@ -13,5 +13,23 @@ header {
   }
 }
 
-$link-color:	#f7931a;
+//Sass color variables
+$link-color: #f7931a;
+$hover-color: darken($link-color, 20%);
+$visited-color: lighten($link-color, 20%);
 
+//link styling
+a{
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover{
+    color: $hover-color;
+    border-bottom: 1px solid $hover-color;
+  }
+
+  &:visited{
+    color: $visited-color;
+    border-color: $visited-color;
+  }
+}
